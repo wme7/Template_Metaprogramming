@@ -1,0 +1,2 @@
+# Metatemplate conditional function
+
