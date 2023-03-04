@@ -1,1 +1,9 @@
+# Folders
+.vscode
+build
+
+# Bynaries
 *.run
+*.out
+*.so
+*.a
