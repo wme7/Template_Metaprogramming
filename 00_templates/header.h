@@ -14,14 +14,17 @@ class Array {
           T& operator[](int i)         { return data_[check(i)]; }
 
     // Overload the << operator to print the array
-    friend std::ostream& operator<< <> (std::ostream& o, const Foo<T>& x);
+    //friend std::ostream& operator<< <> (std::ostream& o, const Foo<T>& x);
 
  private:
 
     int len_;
     T* data_;
-    int check(int i) const {
-        assert(i >= 0 || i < len_);
-        return i;
-    }
+    int check(int i) const;
 };
+
+template <class T>
+inline int Array<T>::check(int i) const {
+    assert(i >= 0 || i < len_);
+    return i;
+}
