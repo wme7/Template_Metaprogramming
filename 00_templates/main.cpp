@@ -1,17 +1,25 @@
-
 #include <iostream>
 #include "header.h"
 
-int main()
-{
-  Array<int>           ai, bi;
-  Array<float>         af, bf;
-  Array<char>          ac, bc;
-  Array<Array<int> >   aai, bai;
-  
-  std::cout << "ai.len()  : " << ai.len()  << std::endl;
-  std::cout << "af.len()  : " << af.len()  << std::endl;
-  std::cout << "ac.len()  : " << ac.len()  << std::endl;
+int main() {
 
-  return 0;
+  bool ok = true;
+
+  // Test the Array class
+  container::Array<int, 5> a(3);
+  container::Array<int, 5> b;
+
+  std::cout << "       a : "; a.print();
+  b = a;
+  std::cout << "   b = a : "; b.print();
+  b[2] = 7;
+  std::cout << "b[2] = 7 : "; b.print();
+  
+  try {
+      std::cout << b[5] << "\n";
+  } catch (const std::out_of_range& e) {
+      std::cerr << e.what() << "\n";
+  }
+  
+  return ok;
 }
