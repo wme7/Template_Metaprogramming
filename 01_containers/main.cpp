@@ -1,5 +1,9 @@
 #include <iostream>
+#include "header.h"
 
 int main(int, char**) {
-    std::cout << "Hello, world!\n";
+
+    std::cout << "sin()" << "\n";
+
+    return 0;
 }

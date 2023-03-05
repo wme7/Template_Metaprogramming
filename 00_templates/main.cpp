@@ -13,4 +13,5 @@ int main()
   std::cout << "af.len()  : " << af.len()  << std::endl;
   std::cout << "ac.len()  : " << ac.len()  << std::endl;
 
+  return 0;
 }
